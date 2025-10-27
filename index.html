@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body>
+
+<body id="app">
     <h1 id="app-title"> Rolodex Madness</h1>
     <h2 id="app-directions"> Match the Fact with the Right Person</h2>
-        <p id="fact-text"> Fact text</p>
-    <div class="person-button"> coach</div>
-        <p class="correct-percent"> 0%</p>
-        <img src="" alt="">
-    <div class="person-button"> mentor</div>
-        <p class="correct-percent"> 0%</p>
-        <img src="" alt="">
-    <div class="person-button"> sponsor</div>
-        <p class="correct-percent"> 0%</p>
-        <img src="" alt="">
-    <h1 id="start-button"> Start</h1>
-    <h1 id="reset-button"> Reset</h1>
+    <p id="fact-text"> Fact text</p>
+    <div class="button-selections">
+        <div id="coach-selection">
+            <div class="person-button"> COACH</div>
+            <p class="correct-percent"> 0%</p>
+            <img src="" alt="">
+        </div>
+        <div id="mentor-selection">
+            <div class="person-button"> MENTOR</div>
+            <p class="correct-percent"> 0%</p>
+            <img src="" alt="">
+        </div>
+        <div id="sponsor-selection">
+            <div class="person-button"> SPONSOR</div>
+            <p class="correct-percent"> 0%</p>
+            <img src="" alt="">
+        </div>
+    </div>
+    <div class="game-buttons">
+    <span id="start-button"> Start</span>
+    <span id="reset-button"> Reset</span>
+    </div>
 </body>
+
 </html>

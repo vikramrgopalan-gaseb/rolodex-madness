@@ -1,3 +1,8 @@
+#app{
+display: grid;
+row-gap: 50px;
+}
+
 #app-title{
 display: flex;
 align-content: center;
@@ -16,6 +21,14 @@ align-content: center;
 justify-content: center;
 }
 
+.button-selections{
+display: flex;
+align-content: center;
+justify-content: center;
+flex-direction: row;
+gap: 350px;
+}
+
 .person-button{
 display: flex;
 align-content: center;
@@ -32,6 +45,15 @@ flex-direction: row;
 
 img{
 
+}
+
+.game-buttons{
+display: flex;
+align-content: center;
+justify-content: center;
+flex-direction: row;
+gap: 350px;
+padding-top: 150px;
 }
 
 #start-button{
