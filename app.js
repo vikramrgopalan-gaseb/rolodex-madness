@@ -1,19 +1,19 @@
 // Variables
 
-let coachScore = 0%
-let mentorScore = 0%
-let sponsorScore = 0%
+let coachScore = 0
+let mentorScore = 0
+let sponsorScore = 0
 
-let fact = {}
+let fact = []
 let winner = false
 
 // Initialization
 
-function init() => {
+function init() {
     console.log("Welcome to Rolodex Madnees!")
-    fact = {}
+    fact = []
     winner = false
-    render();
+    render(); // need to build out to render one of the facts
 }
 
 // Constants
@@ -51,15 +51,18 @@ class Sponsor {
     }
 }
 
+// NEED TO MAKE NEW C/M/S with new keyword
+
+// push each object into an array and then loop through array
+
 // Cached Element References
 
-const titleEl = document.querySelector('#app-title')
-const directionsEl = document.querySelector('#app-directions')
 const coachbuttonEl = document.querySelector('#coach-selection')
 const mentorbuttonEl = document.querySelector('#mentor-selection')
 const sponsorbuttonEl = document.querySelector('#sponsor-selection')
 const startbuttonEl = document.querySelector('#start-button')
 const resetbuttonEl = document.querySelector('#reset-button')
+const factEl = document.querySelector // the fact text will update
 
 // Event Listeners
 
@@ -76,12 +79,14 @@ for (let i = 0; i < fact.lenght; i++) {
 
 // Check for win/loss
 
-function winLoss() => {
-    if coachScore >=90% && mentorScore >=90% && sponsorScore >=90%
-    console.log('Winner!')
+function winLoss() {
+    if coachScore >=90 && mentorScore >=90 && sponsorScore >=90
+    /* console.log('Winner!') */
+    return ('Winner!')
     
     else
-    console.log('Try Again!')
+     /* console.log('Try Again!') */// need DOM manipulation to displauy this in the UI
+    return ('Try Again!')
 }
 
 // Display UI/UX
