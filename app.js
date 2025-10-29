@@ -16,7 +16,9 @@ function init() {
     render(); // need to build out to render one of the facts
 }
 
-// Constants
+render()
+
+// Constants (consider an array of obhect questions instead)
 
 class Coach {
     constructor(name, birthday, hometown, department, title, goal) {
@@ -80,13 +82,21 @@ for (let i = 0; i < fact.lenght; i++) {
 // Check for win/loss
 
 function winLoss() {
-    if coachScore >=90 && mentorScore >=90 && sponsorScore >=90
+    // if coachScore >=90 && mentorScore >=90 && sponsorScore >=90
     /* console.log('Winner!') */
-    return ('Winner!')
+    // return ('Winner!')
     
-    else
+    // else
      /* console.log('Try Again!') */// need DOM manipulation to displauy this in the UI
     return ('Try Again!')
 }
 
 // Display UI/UX
+
+
+
+// Initialize the app
+
+init();
+
+console.log('Hello world')
