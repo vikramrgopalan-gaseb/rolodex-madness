@@ -10,15 +10,17 @@ let winner = false
 // Initialization
 
 function init() {
-    console.log("Welcome to Rolodex Madnees!")
-    fact = []
     winner = false
-    render(); // need to build out to render one of the facts
+    render();
 }
 
-render()
+// Rendering first Fact
 
-// Constants (consider an array of obhect questions instead)
+function render(fact) {
+    const factEl = factArray[0]
+}
+
+// Constants
 
 class Coach {
     constructor(name, birthday, hometown, department, title, goal) {
@@ -55,7 +57,19 @@ class Sponsor {
 
 // NEED TO MAKE NEW C/M/S with new keyword
 
+const myCoach = new Coach('John Doe', '11/2/87', 'Denver', 'Marketing', 'Director', 'Build Team Culture');
+const myMentor = new Mentor('Jane Smith', '6/15/77', 'New York', 'Sales', 'VP', 'Drive $100mm in ARR');
+const mySponsor = new Sponsor('Sally Miller', '3/23/67', 'San Francisco', 'Executive', 'Chief Strategy Officer', 'Raise Series D');
+
 // push each object into an array and then loop through array
+
+const factArray = []
+
+factArray.push(myCoach)
+factArray.push(myMentor)
+factArray.push(mySponsor)
+
+// consider an array of obhect questions instead
 
 // Cached Element References
 
@@ -64,7 +78,7 @@ const mentorbuttonEl = document.querySelector('#mentor-selection')
 const sponsorbuttonEl = document.querySelector('#sponsor-selection')
 const startbuttonEl = document.querySelector('#start-button')
 const resetbuttonEl = document.querySelector('#reset-button')
-const factEl = document.querySelector // the fact text will update
+const factEl = document.querySelector('#fact-text')
 
 // Event Listeners
 
@@ -74,25 +88,28 @@ sponsorbuttonEl.addEventListener('click', selectSponsor)
 
 // Loop Conditions
 
-for (let i = 0; i < fact.lenght; i++) {
-    const fact = facts[i]
+for (let i = 0; i < factArray.lenght; i++) {
+    const fact = factArray[i]
     console.log(fact);
 }
 
 // Check for win/loss
 
 function winLoss() {
-    // if coachScore >=90 && mentorScore >=90 && sponsorScore >=90
-    /* console.log('Winner!') */
-    // return ('Winner!')
+    if (coachScore >=90 && mentorScore >=90 && sponsorScore >=90) {
+            console.log('Winner!')
+            return ('Winner!')
+    }
     
-    // else
-     /* console.log('Try Again!') */// need DOM manipulation to displauy this in the UI
-    return ('Try Again!')
+    else {
+        console.log('Try Again!')
+        return ('Try Again!')
+    }
 }
+// need DOM manipulation to displauy this in the UI
+
 
 // Display UI/UX
-
 
 
 // Initialize the app
