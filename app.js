@@ -97,24 +97,24 @@ resetbuttonEl.addEventListener('click', reset)
 
 coachbuttonEl.onclick = function() {
      console.log('Coach Button clicked!');
+     factArrayIndex + 1
+     if factArrayIndex = 17
+     winLoss
     };
 
 mentorbuttonEl.onclick = function() {
      console.log('Mentor Button clicked!');
+     factArrayIndex + 1
+     if factArrayIndex = 17
+     winLoss
     };
 
 sponsorbuttonEl.onclick = function() {
      console.log('Sponsor Button clicked!');
+     factArrayIndex + 1
+     if factArrayIndex = 17
+     winLoss
     };
-
-// Loop Conditions
-
-for (let i = 0; i < factArray.length; i++) {
-    const fact = factArray[i] // save this as a global variable and increment it upon next question
-    console.log(fact);
-}
-
-// do a basic increment notation based on event listents (select functions)
 
 // Check for win/loss
 
@@ -130,13 +130,11 @@ function winLoss() {
     }
 }
 
-// add function inside the event handler functions to check index position, then run win loss function)
-
 // need DOM manipulation to displauy this in the UI
 
 // Display UI/UX
 
-    // add if condition for score logic
+// add if condition for score logic
 
     if selectCoach = myCoach
 
@@ -148,6 +146,4 @@ function winLoss() {
 
 // Initialize the app
 
-init();
-
-console.log('Hello world')
+function init();
