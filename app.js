@@ -4,8 +4,6 @@ let coachScore = 0
 let mentorScore = 0
 let sponsorScore = 0
 
-    // add if condition for score logic
-
 let fact = []
 let factArrayIndex = 0
 let winner = false
@@ -14,8 +12,10 @@ let winner = false
 
 function init() {
     winner = false
-    // reset score
-    // set fact back to [0]
+    coachScore = 0
+    mentorScore = 0
+    sponsorScore = 0
+    factArrayIndex = 0
     render();
 }
 
@@ -23,7 +23,6 @@ function init() {
 
 function render() {
     factEl.textContent = factArray[factArrayIndex]
-    // map the text content to the string in the object
 }
 
 // Constants
@@ -61,22 +60,21 @@ class Sponsor {
     }
 }
 
-// NEED TO MAKE NEW C/M/S with new keyword
+// Creating objects for Coach, Mentor and Sponsor
 
 const myCoach = new Coach('John Doe', '11/2/87', 'Denver', 'Marketing', 'Director', 'Build Team Culture');
 const myMentor = new Mentor('Jane Smith', '6/15/77', 'New York', 'Sales', 'VP', 'Drive $100mm in ARR');
 const mySponsor = new Sponsor('Sally Miller', '3/23/67', 'San Francisco', 'Executive', 'Chief Strategy Officer', 'Raise Series D');
 
-// push each object into an array and then loop through array
+// Push each object into an array and then loop through array
 
 const factArray = []
 
-factArray.push(Object.values(myCoach))
-factArray.push(myMentor)
-factArray.push(mySponsor)
+factArray.push(...Object.values(myCoach))
+factArray.push(...Object.values(myMentor))
+factArray.push(...Object.values(mySponsor))
 
 // populate the array in the init function
-// Console Log the above to visualize it
 
 // Cached Element References
 
@@ -92,10 +90,22 @@ const factEl = document.querySelector('#fact-text')
 coachbuttonEl.addEventListener ('click', selectCoach)
 mentorbuttonEl.addEventListener ('click', selectMentor)
 sponsorbuttonEl.addEventListener('click', selectSponsor)
+startbuttonEl.addEventListener('click', init)
+resetbuttonEl.addEventListener('click', reset)
 
-// need to build out the event handlers (selec functions)
+// Event Handlers
 
-// add event listeners for start and reset
+coachbuttonEl.onclick = function() {
+     console.log('Coach Button clicked!');
+    };
+
+mentorbuttonEl.onclick = function() {
+     console.log('Mentor Button clicked!');
+    };
+
+sponsorbuttonEl.onclick = function() {
+     console.log('Sponsor Button clicked!');
+    };
 
 // Loop Conditions
 
@@ -125,6 +135,16 @@ function winLoss() {
 // need DOM manipulation to displauy this in the UI
 
 // Display UI/UX
+
+    // add if condition for score logic
+
+    if selectCoach = myCoach
+
+       return (coachScore + 1)
+
+       document.querySelector.textContent = (coachScore + 1)/coachScore
+
+    else if selectMentor
 
 // Initialize the app
 
