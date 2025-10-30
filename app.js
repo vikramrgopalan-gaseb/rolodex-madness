@@ -95,21 +95,21 @@ resetbuttonEl.addEventListener('click', reset)
 
 // Event Handlers
 
-coachbuttonEl.onclick = function() {
+coachbuttonEl.onclick = function selectCoach() {
      console.log('Coach Button clicked!');
      factArrayIndex + 1
      if factArrayIndex = 17
      winLoss
     };
 
-mentorbuttonEl.onclick = function() {
+mentorbuttonEl.onclick = function selectMentor() {
      console.log('Mentor Button clicked!');
      factArrayIndex + 1
      if factArrayIndex = 17
      winLoss
     };
 
-sponsorbuttonEl.onclick = function() {
+sponsorbuttonEl.onclick = function selectSponsor() {
      console.log('Sponsor Button clicked!');
      factArrayIndex + 1
      if factArrayIndex = 17
@@ -140,10 +140,21 @@ function winLoss() {
 
        return (coachScore + 1)
 
-       document.querySelector.textContent = (coachScore + 1)/coachScore
+       document.querySelector.textContent = (coachScore + 1)/6
 
-    else if selectMentor
+    else if selectMentor = myMentor
+
+        return (mentorScore +1)
+
+        document.querySelector.textContent = (coachScore + 1)/6
+    
+        else if selectSponsor = mySponsor
+
+        return (sponsorScore +1)
+
+        document.querySelector.textContent = (sponsorScore + 1)/6
+
 
 // Initialize the app
 
-function init();
+init();
