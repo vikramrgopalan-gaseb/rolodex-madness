@@ -4,20 +4,26 @@ let coachScore = 0
 let mentorScore = 0
 let sponsorScore = 0
 
+    // add if condition for score logic
+
 let fact = []
+let factArrayIndex = 0
 let winner = false
 
 // Initialization
 
 function init() {
     winner = false
+    // reset score
+    // set fact back to [0]
     render();
 }
 
 // Rendering first Fact
 
-function render(fact) {
-    const factEl = factArray[0]
+function render() {
+    factEl.textContent = factArray[factArrayIndex]
+    // map the text content to the string in the object
 }
 
 // Constants
@@ -65,11 +71,12 @@ const mySponsor = new Sponsor('Sally Miller', '3/23/67', 'San Francisco', 'Execu
 
 const factArray = []
 
-factArray.push(myCoach)
+factArray.push(Object.values(myCoach))
 factArray.push(myMentor)
 factArray.push(mySponsor)
 
-// consider an array of obhect questions instead
+// populate the array in the init function
+// Console Log the above to visualize it
 
 // Cached Element References
 
@@ -86,12 +93,18 @@ coachbuttonEl.addEventListener ('click', selectCoach)
 mentorbuttonEl.addEventListener ('click', selectMentor)
 sponsorbuttonEl.addEventListener('click', selectSponsor)
 
+// need to build out the event handlers (selec functions)
+
+// add event listeners for start and reset
+
 // Loop Conditions
 
-for (let i = 0; i < factArray.lenght; i++) {
-    const fact = factArray[i]
+for (let i = 0; i < factArray.length; i++) {
+    const fact = factArray[i] // save this as a global variable and increment it upon next question
     console.log(fact);
 }
+
+// do a basic increment notation based on event listents (select functions)
 
 // Check for win/loss
 
@@ -106,11 +119,12 @@ function winLoss() {
         return ('Try Again!')
     }
 }
+
+// add function inside the event handler functions to check index position, then run win loss function)
+
 // need DOM manipulation to displauy this in the UI
 
-
 // Display UI/UX
-
 
 // Initialize the app
 
