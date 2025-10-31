@@ -7,7 +7,7 @@ let sponsorScore = 0
 let factArrayIndex = 0
 let winner = false
 
-// move the fact array up to this section
+                // move the fact array up to this section
 
 // Initialization
 
@@ -24,8 +24,12 @@ function init() {
 
 function render() {
     factEl.textContent = factArray[factArrayIndex]
-    // add the color logic here
-    // add the scores text content here
+
+                        // add the color logic here
+
+    coachScoreEl.textContent
+    mentorScoreEl.textContent
+    sponsorScoreEl.textContent
 }
 
 // Constants
@@ -73,11 +77,17 @@ const mySponsor = new Sponsor('Sally Miller', '3/23/67', 'San Francisco', 'Execu
 
 const factArray = []
 
-// add invidual arrays for c/m/s/ here
-
 factArray.push(...Object.values(myCoach))
 factArray.push(...Object.values(myMentor))
 factArray.push(...Object.values(mySponsor))
+
+const coachArray = []
+const mentorArray = []
+const sponsorArray = []
+
+coachArray.push(...Object.values(myCoach))
+mentorArray.push(...Object.values(myMentor))
+sponsorArray.push(...Object.values(mySponsor))
 
 // create separate arrays for coach, mentor and sponsor, use "includes" method
 
@@ -89,7 +99,9 @@ const sponsorbuttonEl = document.querySelector('#sponsor-selection')
 const startbuttonEl = document.querySelector('#start-button')
 const resetbuttonEl = document.querySelector('#reset-button')
 const factEl = document.querySelector('#fact-text')
-// create elements for the 3 circle colors
+const coachcircleEl = document.querySelector('.circle')
+const mentorcircleEl = document.querySelector('cirlce')
+const sponsorcircleEl = document.querySelector('.circle')
 
 // Event Listeners
 
@@ -103,24 +115,33 @@ resetbuttonEl.addEventListener('click', init)
 
 function selectCoach() {
      console.log('Coach Button clicked!'); // remove this when ready to turn in
-     if factArrayIndex === 17
-     winLoss
-     factArrayIndex += 1
-    };
+     if (factArrayIndex === 17) {
+        winLoss
+      } else {
+        increasecoachScore
+      }
+        else { factArrayIndex += 1
+    }};
 
 function selectMentor() {
      console.log('Mentor Button clicked!');
-     if factArrayIndex === 17
-     winLoss
-     factArrayIndex += 1
-    };
+    if (factArrayIndex === 17) {
+        winLoss
+    } else {
+        increasementorScore
+    }
+      } else { factArrayIndex += 1
+    }};
 
 function selectSponsor() {
      console.log('Sponsor Button clicked!');
-     if factArrayIndex === 17
-     winLoss
-     factArrayIndex += 1
-    };
+     if (factArrayIndex === 17) {
+        winLoss
+    } else {
+        increasesponsorScore
+      }
+      } else { factArrayIndex += 1
+    }};
 
 // Check for win/loss
 
@@ -140,6 +161,26 @@ function winLoss() { // need DOM manipulation to displauy this in the UI
 
 // wrap the below in a % score function, then add it to render function  
 
+function increasecoachScore() {
+    if factArray.some(element => coachArray.includes(element)) {
+        return (coachScore +=1)
+    }
+}
+
+function increasementorScore() {
+    if factArray.some(element => mentorArray.includes(element)) {
+        return (mentorScore +=1)
+    }
+}
+
+function increasesponsorScore() {
+    if factArray.some(element => sponsorArray.includes(element)) {
+        return (mentorScore +=1)
+    }
+}
+
+
+
 if selectCoach = myCoach
 
        return (coachScore + 1) // consider removing this
@@ -157,6 +198,7 @@ if selectCoach = myCoach
         return (sponsorScore +1)
 
         document.querySelector.textContent = (sponsorScore + 1)/6
+
 
 
 // Initialize the app
