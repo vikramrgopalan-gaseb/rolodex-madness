@@ -100,8 +100,23 @@ const startbuttonEl = document.querySelector('#start-button')
 const resetbuttonEl = document.querySelector('#reset-button')
 const factEl = document.querySelector('#fact-text')
 const coachcircleEl = document.querySelector('.circle')
+if (coachScore < 3) {
+  coachcircleEl.classList.add('highlight-style');
+} else {
+  myElement.classList.remove('highlight-style');
+}
 const mentorcircleEl = document.querySelector('cirlce')
+if (conditionIsTrue) {
+  myElement.classList.add('highlight-style');
+} else {
+  myElement.classList.remove('highlight-style');
+}
 const sponsorcircleEl = document.querySelector('.circle')
+if (conditionIsTrue) {
+  myElement.classList.add('highlight-style');
+} else {
+  myElement.classList.remove('highlight-style');
+}
 
 // Event Listeners
 
