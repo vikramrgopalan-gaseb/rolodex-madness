@@ -77,21 +77,15 @@ background-color: green;
 border-radius: 50%;
 }
 
-#coach-circle.color-style{
+.color-style-green{
     color: green;
-    color: yellow;
-    color: red;
 }
 
-#mentor-circle.color-style{
-    color: green;
+.color-style-yellow{
     color: yellow;
-    color: red;
 }
 
-#sponsor-circle.color-style{
-    color: green;
-    color: yellow;
+.color-style-red{
     color: red;
 }
 
