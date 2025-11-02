@@ -7,18 +7,25 @@ row-gap: 50px;
 display: flex;
 align-content: center;
 justify-content: center;
+font-family: Arial, sans-serif;
+color: darkslateblue;
 }
 
 #app-directions{
 display: flex;
 align-content: center;
 justify-content: center;
+font-family: Arial, sans-serif;
+color: darkgoldenrod;
 }
 
 #fact-text{
 display: flex;
 align-content: center;
 justify-content: center;
+font-family: Arial, sans-serif;
+color: blueviolet;
+padding-bottom: 50px;
 }
 
 .button-selections{
@@ -27,6 +34,8 @@ align-content: center;
 justify-content: center;
 flex-direction: row;
 gap: 350px;
+font-family: Arial, sans-serif;
+color: blueviolet;
 }
 
 .person-button{
@@ -41,6 +50,7 @@ display: flex;
 align-content: center;
 justify-content: center;
 flex-direction: row;
+padding-bottom: 100px;
 }
 
 .circle{
@@ -61,6 +71,8 @@ justify-content: center;
 flex-direction: row;
 gap: 350px;
 padding-top: 150px;
+font-family: Arial, sans-serif;
+color: maroon;
 }
 
 #start-button{
