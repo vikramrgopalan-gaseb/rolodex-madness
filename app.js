@@ -200,6 +200,40 @@ function increasesponsorScore() {
     sponsorScoreEl.textContent = sponsorScore
 }
 
+// Random Functionality
+
+function randomFact() {
+    if (factArray.length === 0) {
+        winLoss()
+    }
+    const randomIndex = Math.floor(Math.random() * factArray.length);
+    const selectedElement = factArray[randomIndex];
+    
+    factArray.splice(randomIndex, 1);
+    return selectedElement
+}
+
+// Audio
+
+const audioFiles = [
+
+];
+
+let currentIndex = 0
+const currentAudio = new Audio();
+
+function playFactAudio() {
+    if (currentIndex < audioFiles.length) {
+    currentAudio.src = audioFiles[currentIndex];
+    currentAudio.play();
+    currentIndex++;
+    }
+}
+
+currentAudio.addEventListener('ended', playNextAudio);
+
+document.getElementById('playButton').addEventListener('click', playNextAudio); // change to coach/mentor/sponsor clicks?
+
 // Initialize the app
 
 init();
