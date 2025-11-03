@@ -216,7 +216,24 @@ function increasesponsorScore() {
 // Audio
 
 const audioFiles = [
-// create a folder in terminal and then link them here
+'/unit1-project/audio/3-23-67.m4a',
+'/unit1-project/audio/6-15-77.m4a',
+'/unit1-project/audio/11-2-87.m4a',
+'/unit1-project/audio/Build Team Culture.m4a',
+'/unit1-project/audio/Chief Strategy Officer.m4a',
+'/unit1-project/audio/Denver.m4a',
+'/unit1-project/audio/Director.m4a',
+'/unit1-project/audio/Drive 100mm in ARR.m4a',
+'/unit1-project/audio/Executive.m4a',
+'/unit1-project/audio/Jane Smith.m4a',
+'/unit1-project/audio/John Doe.m4a',
+'/unit1-project/audio/Marketing.m4a',
+'/unit1-project/audio/New York.m4a',
+'/unit1-project/audio/Raise Series D.m4a',
+'/unit1-project/audio/Sales.m4a',
+'/unit1-project/audio/Sally Miller.m4a',
+'/unit1-project/audio/San Francisco.m4a',
+'/unit1-project/audio/VP.m4a'
 ];
 
 let currentIndex = 0
