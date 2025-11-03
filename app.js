@@ -238,6 +238,8 @@ const audioFiles = [
 
 let currentIndex = 0
 const currentAudio = new Audio();
+const currentAudioEl = document.querySelectorAll('.audio')
+currentAudioEl.addEventListener('click', playFactAudio);
 
 function playFactAudio() {
     if (currentIndex < audioFiles.length) {
@@ -247,9 +249,6 @@ function playFactAudio() {
     currentIndex++;
     }
 }
-document.querySelectorAll('.audio').addEventListener('click', playFactAudio);
-
-currentAudio.addEventListener('ended', playFactAudio);
 
 // Initialize the app
 
