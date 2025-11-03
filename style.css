@@ -57,7 +57,6 @@ padding-bottom: 100px;
 display: flex;
 width: 50px;
 height: 50px;
-background-color: green;
 border-radius: 50%;
 }
 
@@ -65,7 +64,6 @@ border-radius: 50%;
 display: flex;
 width: 50px;
 height: 50px;
-background-color: green;
 border-radius: 50%;
 }
 
@@ -73,20 +71,19 @@ border-radius: 50%;
 display: flex;
 width: 50px;
 height: 50px;
-background-color: green;
 border-radius: 50%;
 }
 
 .color-style-green{
-    color: green;
+    background-color: green;
 }
 
 .color-style-yellow{
-    color: yellow;
+    background-color: yellow;
 }
 
 .color-style-red{
-    color: red;
+    background-color: red;
 }
 
 .game-buttons{

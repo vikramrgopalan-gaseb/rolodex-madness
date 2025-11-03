@@ -23,9 +23,6 @@ function init() {
 function render() {
     factEl.textContent = factArray[factArrayIndex]
     colorChange()
-    increasecoachScore(factArray, coachArray)
-    increasementorScore(factArray, mentorArray)
-    increasesponsorScore(factArray, sponsorArray)
 }
 
 // Constants
@@ -110,26 +107,29 @@ resetbuttonEl.addEventListener('click', init)
 
 function selectCoach() {
      console.log('Coach Button clicked!'); // remove this when ready to turn in
-     increasecoachScore
-     factArrayIndex += 1
+     increasecoachScore()
+     factArrayIndex ++ 
      if (factArrayIndex === 18) {
-        winLoss }
+        winLoss() }
+     render()
     };
 
 function selectMentor() {
      console.log('Mentor Button clicked!');
-     increasementorScore
-     factArrayIndex += 1
+     increasementorScore()
+     factArrayIndex ++ 
     if (factArrayIndex === 18) {
-        winLoss }
+        winLoss() }
+     render()
     };
 
 function selectSponsor() {
      console.log('Sponsor Button clicked!');
-     increasesponsorScore
-     factArrayIndex += 1
+     increasesponsorScore()
+     factArrayIndex ++ 
      if (factArrayIndex === 18) {
-        winLoss }
+        winLoss() }
+     render()
     };
 
 // Check for win/loss
@@ -179,23 +179,23 @@ if (sponsorScore >= 3 && sponsorScore <= 5) {
 }
 }
 
-function increasecoachScore(factArray, coachArray) {
+function increasecoachScore() {
     if (coachArray.includes(factArray[factArrayIndex])) {
-        return (coachScore +=1)
+        coachScore ++
     }
     coachScoreEl.textContent = coachScore
 }
 
-function increasementorScore(factArray, mentorArray) {
+function increasementorScore() {
     if (mentorArray.includes(factArray[factArrayIndex])) {
-        return (mentorScore +=1)
+        mentorScore ++
     }
     mentorScoreEl.textContent = mentorScore
 }
 
-function increasesponsorScore(factArray, sponsorArray) {
+function increasesponsorScore() {
     if (sponsorArray.includes(factArray[factArrayIndex])) {
-        return (sponsorScore +=1)
+        sponsorScore ++
     }
     sponsorScoreEl.textContent = sponsorScore
 }
