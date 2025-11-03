@@ -23,9 +23,9 @@ function init() {
 function render() {
     factEl.textContent = factArray[factArrayIndex]
     colorChange()
-    increasecoachScore()
-    increasementorScore()
-    increasesponsorScore()
+    increasecoachScore(factArray, coachArray)
+    increasementorScore(factArray, mentorArray)
+    increasesponsorScore(factArray, sponsorArray)
 }
 
 // Constants
@@ -93,6 +93,7 @@ const sponsorbuttonEl = document.querySelector('.sponsor-button')
 const startbuttonEl = document.querySelector('#start-button')
 const resetbuttonEl = document.querySelector('#reset-button')
 const factEl = document.querySelector('#fact-text')
+const [coachScoreEl, mentorScoreEl, sponsorScoreEl] = document.querySelectorAll('.correct-score')
 const coachcircleEl = document.querySelector('#coach-circle')
 const mentorcircleEl = document.querySelector('#mentor-circle')
 const sponsorcircleEl = document.querySelector('#sponsor-circle')
@@ -182,21 +183,21 @@ function increasecoachScore(factArray, coachArray) {
     if (coachArray.includes(factArray[factArrayIndex])) {
         return (coachScore +=1)
     }
-    coachScoreEl.textContent
+    coachScoreEl.textContent = coachScore
 }
 
 function increasementorScore(factArray, mentorArray) {
     if (mentorArray.includes(factArray[factArrayIndex])) {
         return (mentorScore +=1)
     }
-    mentorScoreEl.textContent
+    mentorScoreEl.textContent = mentorScore
 }
 
 function increasesponsorScore(factArray, sponsorArray) {
     if (sponsorArray.includes(factArray[factArrayIndex])) {
         return (sponsorScore +=1)
     }
-    sponsorScoreEl.textContent
+    sponsorScoreEl.textContent = sponsorScore
 }
 
 // Initialize the app
