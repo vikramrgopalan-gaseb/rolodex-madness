@@ -225,6 +225,7 @@ const currentAudio = new Audio();
 function playFactAudio() {
     if (currentIndex < audioFiles.length) {
     currentAudio.src = audioFiles[currentIndex];
+    currentAudio.volume = .10
     currentAudio.play();
     currentIndex++;
     }
