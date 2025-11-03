@@ -202,7 +202,7 @@ function increasesponsorScore() {
 
 // Random Functionality
 
-function randomFact() {
+/* function randomFact() {
     if (factArray.length === 0) {
         winLoss()
     }
@@ -211,12 +211,12 @@ function randomFact() {
     
     factArray.splice(randomIndex, 1);
     return selectedElement
-}
+} */
 
 // Audio
 
 const audioFiles = [
-
+// create a folder in terminal and then link them here
 ];
 
 let currentIndex = 0
@@ -230,10 +230,9 @@ function playFactAudio() {
     currentIndex++;
     }
 }
+document.querySelectorAll('.audio').addEventListener('click', playFactAudio);
 
-currentAudio.addEventListener('ended', playNextAudio);
-
-document.getElementById('playButton').addEventListener('click', playNextAudio); // change to coach/mentor/sponsor clicks?
+currentAudio.addEventListener('ended', playFactAudio);
 
 // Initialize the app
 
