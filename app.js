@@ -5,7 +5,7 @@ let mentorScore = 0
 let sponsorScore = 0
 
 let factArrayIndex = 0
-let winner = false // add this to the win/loss function
+let winner = false
 
 // Initialization
 
@@ -22,14 +22,10 @@ function init() {
 
 function render() {
     factEl.textContent = factArray[factArrayIndex]
-
-                        // add the color logic here (color change function)
-
-    coachScoreEl.textContent // add these to score function
-    mentorScoreEl.textContent // add these to score function
-    sponsorScoreEl.textContent // add these to score function
-
-                       // add score logic here - yes, add score function here
+    colorChange()
+    increasecoachScore()
+    increasementorScore()
+    increasesponsorScore()
 }
 
 // Constants
@@ -98,35 +94,8 @@ const startbuttonEl = document.querySelector('#start-button')
 const resetbuttonEl = document.querySelector('#reset-button')
 const factEl = document.querySelector('#fact-text')
 const coachcircleEl = document.querySelector('#coach-circle')
-// wrap this color logic in a function
-
-if (coachScore >= 3 && coachScore <= 5) {
-    coachcircleEl.classList.remove('color-style-red');
-    coachcircleEl.classList.add('color-style-yellow');
-}
-  else if (coachScore > 5) {
-    coachcircleEl.classList.remove('color-style-yellow');
-    coachcircleEl.classList.add('color-style-green');
-  }
-
 const mentorcircleEl = document.querySelector('#mentor-circle')
-if (mentorScore < 3) {
-  mentorcircleEl.classList.add('color-style');
-} else if (3 < mentorScore < 5) {
-  mentorcircleEl.classList.add('color-style');
-}
-  else {
-  mentorcircleEl.classList.add('color-style');
-  }
 const sponsorcircleEl = document.querySelector('#sponsor-circle')
-if (sponsorScore < 3) {
-  sponsorcircleEl.classList.add('color-style');
-} else if (3 < sponsorScore < 5) {
-  sponsorcircleEl.classList.add('color-style');
-}
-  else {
-  sponsorcircleEl.classList.add('color-style');
-  }
 
 // Event Listeners
 
@@ -144,26 +113,23 @@ function selectCoach() {
      factArrayIndex += 1
      if (factArrayIndex === 18) {
         winLoss }
-    }; // implement these edits to bottom 2 functions
-
+    };
 
 function selectMentor() {
      console.log('Mentor Button clicked!');
-    if (factArrayIndex === 17) {
-        winLoss
-    } else {
-        increasementorScore
+     increasementorScore
      factArrayIndex += 1
-    }};
+    if (factArrayIndex === 18) {
+        winLoss }
+    };
 
 function selectSponsor() {
      console.log('Sponsor Button clicked!');
-     if (factArrayIndex === 17) {
-        winLoss
-    } else {
-        increasesponsorScore
+     increasesponsorScore
      factArrayIndex += 1
-    }};
+     if (factArrayIndex === 18) {
+        winLoss }
+    };
 
 // Check for win/loss
 
@@ -183,28 +149,54 @@ function winLoss() {
 
 // Display UI/UX
 
-// add if condition for score logic, triple equals and plue equals
+function colorChange() {
+if (coachScore >= 3 && coachScore <= 5) {
+    coachcircleEl.classList.remove('color-style-red');
+    coachcircleEl.classList.add('color-style-yellow');
+}
+  else if (coachScore > 5) {
+    coachcircleEl.classList.remove('color-style-yellow');
+    coachcircleEl.classList.add('color-style-green');
+  }
 
-// create separate arrays for coach, mentor and sponsor, use "includes" method
+if (mentorScore >= 3 && mentorScore <= 5) {
+    mentorcircleEl.classList.remove('color-style-red');
+    mentorcircleEl.classList.add('color-style-yellow');
+} 
+  else if (mentorScore > 5) {
+    mentorcircleEl.classList.remove('color-style-yellow');
+    mentorcircleEl.classList.add('color-style-green');
+}
 
-// wrap the below in a % score function, then add it to render function
+if (sponsorScore >= 3 && sponsorScore <= 5) {
+    sponsorcircleEl.classList.remove('color-style-red');
+    sponsorcircleEl.classList.add('color-style-yellow');
+} 
+  else if (sponsorScore > 5) {
+    sponsorcircleEl.classList.remove('color-style-yellow');
+    sponsorcircleEl.classList.add('color-style-green');
+}
+}
 
 function increasecoachScore(factArray, coachArray) {
     if (coachArray.includes(factArray[factArrayIndex])) {
         return (coachScore +=1)
     }
-} // implement these edits to bottom 2 functions
+    coachScoreEl.textContent
+}
 
 function increasementorScore(factArray, mentorArray) {
-    if (factArray.some(element => mentorArray.includes(element))) {
+    if (mentorArray.includes(factArray[factArrayIndex])) {
         return (mentorScore +=1)
     }
+    mentorScoreEl.textContent
 }
 
 function increasesponsorScore(factArray, sponsorArray) {
-    if (factArray.some(element => sponsorArray.includes(element))) {
+    if (sponsorArray.includes(factArray[factArrayIndex])) {
         return (sponsorScore +=1)
     }
+    sponsorScoreEl.textContent
 }
 
 // Initialize the app
