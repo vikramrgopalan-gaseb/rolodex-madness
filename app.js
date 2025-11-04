@@ -209,24 +209,24 @@ function increasesponsorScore() {
 // Audio
 
 const audioFiles = [
-    '/unit1-project/audio/John Doe.m4a',
-    '/unit1-project/audio/11-2-87.m4a',
-    '/unit1-project/audio/Denver.m4a',
-    '/unit1-project/audio/Marketing.m4a',
-    '/unit1-project/audio/Director.m4a',
-    '/unit1-project/audio/Build Team Culture.m4a',
-    '/unit1-project/audio/Jane Smith.m4a',
-    '/unit1-project/audio/6-15-77.m4a',
-    '/unit1-project/audio/New York.m4a',
-    '/unit1-project/audio/Sales.m4a',
-    '/unit1-project/audio/VP.m4a',
-    '/unit1-project/audio/Drive 100mm in ARR.m4a',
-    '/unit1-project/audio/Sally Miller.m4a',
-    '/unit1-project/audio/3-23-67.m4a',
-    '/unit1-project/audio/San Francisco.m4a',
-    '/unit1-project/audio/Chief Strategy Officer.m4a',
-    '/unit1-project/audio/Executive.m4a',
-    '/unit1-project/audio/Raise Series D.m4a'
+    '/rolodex-madness/audio/John Doe.m4a',
+    '/rolodex-madness/audio/11-2-87.m4a',
+    '/rolodex-madness/audio/Denver.m4a',
+    '/rolodex-madness/audio/Marketing.m4a',
+    '/rolodex-madness/audio/Director.m4a',
+    '/rolodex-madness/audio/Build Team Culture.m4a',
+    '/rolodex-madness/audio/Jane Smith.m4a',
+    '/rolodex-madness/audio/6-15-77.m4a',
+    '/rolodex-madness/audio/New York.m4a',
+    '/rolodex-madness/audio/Sales.m4a',
+    '/rolodex-madness/audio/VP.m4a',
+    '/rolodex-madness/audio/Drive 100mm in ARR.m4a',
+    '/rolodex-madness/audio/Sally Miller.m4a',
+    '/rolodex-madness/audio/3-23-67.m4a',
+    '/rolodex-madness/audio/San Francisco.m4a',
+    '/rolodex-madness/audio/Chief Strategy Officer.m4a',
+    '/rolodex-madness/audio/Executive.m4a',
+    '/rolodex-madness/audio/Raise Series D.m4a'
 ];
 
 let currentIndex = 0
