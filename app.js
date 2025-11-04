@@ -15,10 +15,12 @@ function init() {
     mentorScore = 0
     sponsorScore = 0
     factArrayIndex = 0
+    currentIndex = 0
     coachcircleEl.className = 'color-style-red'
     mentorcircleEl.className = 'color-style-red'
     sponsorcircleEl.className = 'color-style-red'
     render();
+    playFactAudio();
 }
 
 // Rendering first Fact
@@ -112,7 +114,7 @@ resetbuttonEl.addEventListener('click', init)
 // Event Handlers
 
 function selectCoach() {
-     console.log('Coach Button clicked!'); // remove this when ready to turn in
+     console.log('Coach Button clicked!');
      increasecoachScore()
      factArrayIndex ++ 
      render()
@@ -147,7 +149,7 @@ function winLoss() {
             factEl.textContent = "Winner!"
     } else {
         console.log('Try Again!')
-        winner = false // consider deleting this line
+        winner = false
         factEl.textContent = "Try Again!"
     }
 }
