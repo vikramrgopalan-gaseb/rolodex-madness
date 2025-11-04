@@ -15,6 +15,9 @@ function init() {
     mentorScore = 0
     sponsorScore = 0
     factArrayIndex = 0
+    coachcircleEl.className = 'color-style-red'
+    mentorcircleEl.className = 'color-style-red'
+    sponsorcircleEl.className = 'color-style-red'
     render();
 }
 
@@ -22,6 +25,9 @@ function init() {
 
 function render() {
     factEl.textContent = factArray[factArrayIndex]
+    coachScoreEl.textContent = coachScore
+    mentorScoreEl.textContent = mentorScore
+    sponsorScoreEl.textContent = sponsorScore
     colorChange()
 }
 
@@ -109,42 +115,40 @@ function selectCoach() {
      console.log('Coach Button clicked!'); // remove this when ready to turn in
      increasecoachScore()
      factArrayIndex ++ 
+     render()
      if (factArrayIndex === 18) {
         winLoss() }
-     render()
     };
 
 function selectMentor() {
      console.log('Mentor Button clicked!');
      increasementorScore()
      factArrayIndex ++ 
+     render()
     if (factArrayIndex === 18) {
         winLoss() }
-     render()
     };
 
 function selectSponsor() {
      console.log('Sponsor Button clicked!');
      increasesponsorScore()
      factArrayIndex ++ 
+     render()
      if (factArrayIndex === 18) {
         winLoss() }
-     render()
     };
 
 // Check for win/loss
 
 function winLoss() {
-    if (coachScore >=5 && mentorScore >=5 && sponsorScore >=5) {
+    if (coachScore >5 && mentorScore >5 && sponsorScore >5) {
             console.log('Winner!')
             winner = true
             factEl.textContent = "Winner!"
-            return ('Winner!') // consider deleting this line
     } else {
         console.log('Try Again!')
         winner = false // consider deleting this line
         factEl.textContent = "Try Again!"
-        return ('Try Again!') // consider deleting this line
     }
 }
 
@@ -200,6 +204,50 @@ function increasesponsorScore() {
     sponsorScoreEl.textContent = sponsorScore
 }
 
+// Audio
+
+const audioFiles = [
+    '/unit1-project/audio/John Doe.m4a',
+    '/unit1-project/audio/11-2-87.m4a',
+    '/unit1-project/audio/Denver.m4a',
+    '/unit1-project/audio/Marketing.m4a',
+    '/unit1-project/audio/Director.m4a',
+    '/unit1-project/audio/Build Team Culture.m4a',
+    '/unit1-project/audio/Jane Smith.m4a',
+    '/unit1-project/audio/6-15-77.m4a',
+    '/unit1-project/audio/New York.m4a',
+    '/unit1-project/audio/Sales.m4a',
+    '/unit1-project/audio/VP.m4a',
+    '/unit1-project/audio/Drive 100mm in ARR.m4a',
+    '/unit1-project/audio/Sally Miller.m4a',
+    '/unit1-project/audio/3-23-67.m4a',
+    '/unit1-project/audio/San Francisco.m4a',
+    '/unit1-project/audio/Chief Strategy Officer.m4a',
+    '/unit1-project/audio/Executive.m4a',
+    '/unit1-project/audio/Raise Series D.m4a'
+];
+
+let currentIndex = 0
+const currentAudio = new Audio();
+const currentAudioEl = document.querySelectorAll('.audio')
+
+currentAudioEl.forEach(audioFile => {
+    audioFile.addEventListener('click', playFactAudio)
+});
+
+function playFactAudio() {
+    if (currentIndex < audioFiles.length) {
+        currentAudio.src = audioFiles[currentIndex];
+        currentAudio.volume = .60
+        currentAudio.play();
+        currentIndex++;
+    }
+}
+
+// Initialize the app
+
+init();
+
 // Random Functionality
 
 /* function randomFact() {
@@ -212,44 +260,3 @@ function increasesponsorScore() {
     factArray.splice(randomIndex, 1);
     return selectedElement
 } */
-
-// Audio
-
-const audioFiles = [
-'/unit1-project/audio/3-23-67.m4a',
-'/unit1-project/audio/6-15-77.m4a',
-'/unit1-project/audio/11-2-87.m4a',
-'/unit1-project/audio/Build Team Culture.m4a',
-'/unit1-project/audio/Chief Strategy Officer.m4a',
-'/unit1-project/audio/Denver.m4a',
-'/unit1-project/audio/Director.m4a',
-'/unit1-project/audio/Drive 100mm in ARR.m4a',
-'/unit1-project/audio/Executive.m4a',
-'/unit1-project/audio/Jane Smith.m4a',
-'/unit1-project/audio/John Doe.m4a',
-'/unit1-project/audio/Marketing.m4a',
-'/unit1-project/audio/New York.m4a',
-'/unit1-project/audio/Raise Series D.m4a',
-'/unit1-project/audio/Sales.m4a',
-'/unit1-project/audio/Sally Miller.m4a',
-'/unit1-project/audio/San Francisco.m4a',
-'/unit1-project/audio/VP.m4a'
-];
-
-let currentIndex = 0
-const currentAudio = new Audio();
-const currentAudioEl = document.querySelectorAll('.audio')
-currentAudioEl.addEventListener('click', playFactAudio);
-
-function playFactAudio() {
-    if (currentIndex < audioFiles.length) {
-    currentAudio.src = audioFiles[currentIndex];
-    currentAudio.volume = .10
-    currentAudio.play();
-    currentIndex++;
-    }
-}
-
-// Initialize the app
-
-init();
