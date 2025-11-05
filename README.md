@@ -6,7 +6,7 @@ Game Name: Rolodex Madness
 
 Psychology generally states that humans can maintain at most 150 relationships. This is where large social media platforms like Facebook and LinkedIn fall short, by creating pseudorelationships and misaligning user needs with product and financial goals. In work environments, users need a solution that helps them focus on a handful of key relationships to foster development - the coach, mentor and sponsor
 
-Getting Started: [Link]
+Getting Started: https://vikramrgopalan-gaseb.github.io/rolodex-madness/
 
 Attributions: N/A
 
